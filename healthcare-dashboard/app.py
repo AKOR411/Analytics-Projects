@@ -9,7 +9,8 @@ st.set_page_config(page_title="Clinic Executive Dashboard", layout="wide")
 @st.cache_data  # This optimizes performance so the file doesn't reload on every button click!
 def load_and_clean_data():
     # Load dataset from the local directory
-    df = pd.read_csv('KaggleV2-May-2016.csv')
+df = pd.read_csv('healthcare-dashboard/KaggleV2-May-2016.csv')
+
     
     # Standardize Column Names
     df.rename(columns={
