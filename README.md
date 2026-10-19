@@ -22,7 +22,9 @@ I am an aspiring Data Professional specializing in translating complex datasets 
 | Project Name | Business Problem & Objective | Key Tools Used | Project Links |
 | :--- | :--- | :--- | :--- |
 | **📈 Patient No-Show Analysis** | Cleaning and analyzing clinic appointment schedules to reduce revenue loss from missed patient visits. | Python, Pandas, Seaborn | [View Code](./no-show-analysis/) |
-| **📊 Interactive Clinic Dashboard** | Built a live, interactive Streamlit web application for healthcare executives to monitor regional KPIs and track operational bottlenecks. | Python, Streamlit, Plotly | [View Code](./https://akor411-clinic-dashboard.streamlit.app/) |
+
+| **📊 Interactive Clinic Dashboard** | Built a live, interactive Streamlit web application for healthcare executives to monitor regional KPIs and track operational bottlenecks. | Python, Streamlit, Plotly | [Live App](https://akor411-clinic-dashboard.streamlit.app/) \| [View Code](./healthcare-dashboard/) |
+
 
 
 ---
