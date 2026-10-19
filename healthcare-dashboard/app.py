@@ -1,16 +1,23 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+import os
 
 # 1. Page Settings & Setup
 st.set_page_config(page_title="Clinic Executive Dashboard", layout="wide")
 
 # 2. Data Loading & Quick-Cleaning Function
-@st.cache_data  # This optimizes performance so the file doesn't reload on every button click!
+@st.cache_data
 def load_and_clean_data():
-    # Load dataset from the local directory
-df = pd.read_csv('healthcare-dashboard/KaggleV2-May-2016.csv')
-
+    # Smart Fallback check to find the file whether it's in the root or folder
+    if os.path.exists('healthcare-dashboard/KaggleV2-May-2016.csv'):
+        file_path = 'healthcare-dashboard/KaggleV2-May-2016.csv'
+    elif os.path.exists('KaggleV2-May-2016.csv'):
+        file_path = 'KaggleV2-May-2016.csv'
+    else:
+        raise FileNotFoundError("Could not find KaggleV2-May-2016.csv in root or folder path.")
+        
+    df = pd.read_csv(file_path)
     
     # Standardize Column Names
     df.rename(columns={
@@ -89,4 +96,3 @@ fig = px.line(
 )
 
 st.plotly_chart(fig, use_container_width=True)
-
